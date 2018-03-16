@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var myImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func mySliderAction(_ sender: UISlider) {
+                myImage.alpha = CGFloat(sender.value) // 利用Slider傳入的值，設定Image View的alpha
+    }
+    
+    
 }
 
